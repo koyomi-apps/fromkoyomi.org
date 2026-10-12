@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<style>
+.t{fill:#F7F3A1}.a{fill:#63611E}.b{fill:#FDF9F0}.h{fill:#70576B}.g{stroke:#F7F3A1}
+@media (prefers-color-scheme:dark){.t{fill:#49482C}.a{fill:#CECA75}.b{fill:#E8E4BE}.h{fill:#D8B8D0}.g{stroke:#49482C}}
+</style>
+<rect class="t" width="512" height="512" rx="112"/>
+<g transform="translate(256 256) scale(1.3) translate(-256 -244.5)">
+<g transform="translate(0 20)" stroke-width="8" stroke-linejoin="round">
+<path class="a g" d="M122 318 C118 280 186 260 262 260 C340 260 396 280 392 318 C388 356 330 370 254 370 C178 370 126 356 122 318 Z"/>
+<path class="b g" d="M150 236 C148 202 196 184 250 184 C306 184 346 202 342 232 C338 262 300 272 244 272 C190 272 152 262 150 236 Z"/>
+<path class="h g" stroke-width="18" d="M256 392 C150 320 110 250 110 200 C110 156 142 128 182 128 C214 128 242 146 256 176 C270 146 298 128 330 128 C370 128 402 156 402 200 C402 250 362 320 256 392 Z" transform="translate(252 190) rotate(-6) scale(0.42) translate(-256 -392)"/>
+</g>
+</g>
+</svg>
