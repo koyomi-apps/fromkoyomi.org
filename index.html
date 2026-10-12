@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FDF9F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14140E" media="(prefers-color-scheme: dark)">
+<title>Koyomi: free health apps that work offline</title>
+<meta name="description" content="Free, open-source health apps that work offline and keep your data on your phone. Home of Kitae, a workout tracker for Android and iPhone.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/DarkerGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/DarkerGrotesque-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top wrap">
+  <a class="brand" href="./" aria-label="Koyomi, home">
+    <svg class="mark" viewBox="112 92 288 306" aria-hidden="true" focusable="false">
+      <g transform="translate(0 20)">
+        <path class="stone-a" d="M122 318 C118 280 186 260 262 260 C340 260 396 280 392 318 C388 356 330 370 254 370 C178 370 126 356 122 318 Z"/>
+        <path class="stone-b" d="M150 236 C148 202 196 184 250 184 C306 184 346 202 342 232 C338 262 300 272 244 272 C190 272 152 262 150 236 Z"/>
+        <path class="heart" d="M256 392 C150 320 110 250 110 200 C110 156 142 128 182 128 C214 128 242 146 256 176 C270 146 298 128 330 128 C370 128 402 156 402 200 C402 250 362 320 256 392 Z" transform="translate(252 190) rotate(-6) scale(0.42) translate(-256 -392)"/>
+      </g>
+    </svg>
+    <span>Koyomi</span>
+  </a>
+  <nav aria-label="Source code">
+    <a href="https://codeberg.org/koyomi-apps">Codeberg</a>
+    <a href="https://github.com/koyomi-apps">GitHub</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <div>
+      <h1>Health apps that keep your data on your phone.</h1>
+      <p class="lede">Koyomi makes free, open-source apps for tracking your health. They work offline, need no account and show no ads.</p>
+      <p class="jump"><a href="#kitae">See Kitae, our workout tracker</a></p>
+    </div>
+    <div class="hero-art">
+      <svg class="cairn settle" viewBox="96 80 320 350" role="img" aria-label="Two stones stacked on a ground line, with a heart balanced on top">
+        <g transform="translate(0 20)">
+          <rect class="ground" x="118" y="382" width="276" height="10" rx="5"/>
+          <g class="piece p1">
+            <path class="stone-a" d="M122 318 C118 280 186 260 262 260 C340 260 396 280 392 318 C388 356 330 370 254 370 C178 370 126 356 122 318 Z"/>
+          </g>
+          <g class="piece p2">
+            <path class="stone-b" d="M150 236 C148 202 196 184 250 184 C306 184 346 202 342 232 C338 262 300 272 244 272 C190 272 152 262 150 236 Z"/>
+          </g>
+          <g class="piece p3">
+            <path class="heart" d="M256 392 C150 320 110 250 110 200 C110 156 142 128 182 128 C214 128 242 146 256 176 C270 146 298 128 330 128 C370 128 402 156 402 200 C402 250 362 320 256 392 Z" transform="translate(252 190) rotate(-6) scale(0.42) translate(-256 -392)"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="kitae" id="kitae" aria-labelledby="kitae-name">
+    <div class="wrap kitae-inner">
+      <div>
+        <h2 class="name" id="kitae-name">Kitae<span lang="ja">鍛え</span></h2>
+        <p>A workout tracker. Plan your training days, log every set and watch your lifts climb. The rest timer follows you onto the Lock Screen.</p>
+        <p>Back up to a plain zip file and restore it on Android or iPhone.</p>
+        <ul class="get">
+          <li>
+            <span class="tag">.android</span>
+            <span class="links">
+              <a href="https://f-droid.org/packages/ca.gureet.kitae/">Get it on F-Droid</a>
+              <a href="https://codeberg.org/koyomi-apps/kitae">Source code</a>
+            </span>
+          </li>
+          <li>
+            <span class="tag">.iphone</span>
+            <span class="links">
+              <span>TestFlight beta soon</span>
+              <a href="https://codeberg.org/koyomi-apps/kitae-ios">Source code</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <figure class="days">
+        <div class="cells" aria-hidden="true">
+          <i></i><b></b><b></b><i></i><b></b><b></b><i></i>
+          <i></i><b></b><i></i><b></b><b></b><i></i><b></b>
+          <b></b><b></b><b></b><b></b><i></i><b></b><i></i>
+          <i></i><i></i><b></b><b></b><b></b><i></i><b></b>
+          <i></i><b></b><b></b><i></i><b></b><i></i><b></b>
+          <i></i><b></b><i></i><b></b><i></i><b></b><i></i>
+          <b></b><i></i><b></b><b></b><b></b><i></i><i></i>
+          <i></i><i></i><b></b><i></i><b></b><b></b><i></i>
+          <i></i><b></b><b></b><i></i><b></b><b></b><b></b>
+          <i></i><b></b><b></b><b></b><i></i><b></b><i></i>
+          <i></i><b></b><b></b><b></b><i></i><i></i><b></b>
+          <b></b><i></i><b></b><b></b><i></i><b></b><b></b>
+          <i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+          <i></i><b></b><b></b><b></b><b></b><b></b><i></i>
+          <b></b><b></b><i></i><b></b><b></b><i></i><i></i>
+          <i></i><b></b><b></b><s></s><s></s><s></s><s></s>
+        </div>
+        <figcaption>Kitae's activity grid: one square for each day, filled in when you train. This one is an example.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="how wrap" aria-labelledby="how-title">
+    <h2 id="how-title">How we make apps</h2>
+    <dl>
+      <div class="item">
+        <dt>.offline</dt>
+        <dd>Everything works without a connection. Your data is a file on your phone, and backups are plain zip files you keep wherever you like.</dd>
+      </div>
+      <div class="item">
+        <dt>.open</dt>
+        <dd>The code is open. Read it, build it yourself, or send a fix or an idea to the app's repository.</dd>
+      </div>
+      <div class="item">
+        <dt>.private</dt>
+        <dd>No accounts, no ads, no tracking, and this website sets no cookies either.</dd>
+      </div>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Koyomi (<span lang="ja">暦</span>) is Japanese for calendar, a record of your days. Set in <a href="fonts/OFL-DarkerGrotesque.txt">Darker Grotesque</a> and <a href="fonts/OFL-SpaceMono.txt">Space Mono</a>, both under the SIL Open Font License.</p>
+    <nav aria-label="Source code">
+      <a href="https://codeberg.org/koyomi-apps">Codeberg</a>
+      <a href="https://github.com/koyomi-apps">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

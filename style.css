@@ -1,0 +1,425 @@
+/* Koyomi home page. Colours are Kitae's own colour sets; fonts are Kitae's fonts. */
+
+@font-face {
+  font-family: "Darker Grotesque";
+  src: url("fonts/DarkerGrotesque-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Darker Grotesque";
+  src: url("fonts/DarkerGrotesque-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --paper: #FDF9F0;
+  --ink: #1C1C16;
+  --ink-soft: #5E5C4E;
+  --rule: #1C1C16;
+  --olive: #63611E;
+  --olive-soft: #F7F3A1;
+  --on-olive-soft: #545210;
+
+  /* The Kitae band */
+  --band-bg: #63611E;
+  --band-fg: #FFFFFF;
+  --band-on: #F7F3A1;
+  --band-off: rgba(255, 255, 255, 0.16);
+
+  /* The cairn */
+  --stone-a: #63611E;
+  --stone-b: #F7F3A1;
+  --heart: #70576B;
+  --gap: #FDF9F0;
+
+  --display: "Darker Grotesque", "Avenir Next Condensed", ui-sans-serif, system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --cjk: "Hiragino Sans", "Yu Gothic", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14140E;
+    --ink: #E6E2D9;
+    --ink-soft: #B3B0A0;
+    --rule: #E6E2D9;
+    --olive: #CECA75;
+    --olive-soft: #49482C;
+    --on-olive-soft: #E8E4BE;
+
+    --band-bg: #49482C;
+    --band-fg: #E8E4BE;
+    --band-on: #CECA75;
+    --band-off: rgba(255, 255, 255, 0.08);
+
+    --stone-a: #CECA75;
+    --stone-b: #49482C;
+    --heart: #D8B8D0;
+    --gap: #14140E;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.45rem);
+  line-height: 1.4;
+}
+
+::selection {
+  background: var(--olive-soft);
+  color: var(--on-olive-soft);
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+a:hover {
+  text-decoration-thickness: 4px;
+}
+a:focus-visible {
+  outline: 3px solid var(--olive);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+[lang="ja"] {
+  font-family: var(--cjk);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 56px);
+}
+
+/* Header */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 22px;
+}
+.brand {
+  --gap: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.mark {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+}
+.top nav {
+  display: flex;
+  gap: clamp(16px, 3vw, 32px);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Cairn */
+
+.stone-a {
+  fill: var(--stone-a);
+  stroke: var(--gap);
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+.stone-b {
+  fill: var(--stone-b);
+  stroke: var(--gap);
+  stroke-width: 8;
+  stroke-linejoin: round;
+}
+.heart {
+  fill: var(--heart);
+  stroke: var(--gap);
+  stroke-width: 18;
+  stroke-linejoin: round;
+}
+.ground {
+  fill: var(--ink);
+  opacity: 0.16;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  align-items: center;
+  gap: clamp(32px, 5vw, 64px);
+  padding-block: clamp(32px, 6vw, 80px) clamp(56px, 9vw, 112px);
+}
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 2rem + 7vw, 7rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.lede {
+  max-width: 28em;
+  margin: 1.3em 0 0;
+  color: var(--ink-soft);
+  font-size: 1.1em;
+}
+.jump {
+  margin: 1.4em 0 0;
+}
+
+.hero-art {
+  --gap: var(--olive-soft);
+  --stone-b: #FDF9F0;
+  justify-self: stretch;
+  display: grid;
+  place-items: center;
+  max-width: 440px;
+  padding: clamp(24px, 5vw, 48px);
+  border-radius: 36px;
+  background: var(--olive-soft);
+}
+@media (prefers-color-scheme: dark) {
+  .hero-art {
+    --stone-b: #E8E4BE;
+  }
+}
+.cairn {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .settle .piece {
+    animation: settle 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .settle .p1 {
+    animation-delay: 0.1s;
+  }
+  .settle .p2 {
+    animation-delay: 0.4s;
+  }
+  .settle .p3 {
+    animation-delay: 0.75s;
+  }
+  @keyframes settle {
+    0% {
+      opacity: 0;
+      transform: translateY(-44px);
+    }
+    55% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Kitae */
+
+.kitae {
+  background: var(--band-bg);
+  color: var(--band-fg);
+}
+.kitae a:focus-visible {
+  outline-color: var(--band-fg);
+}
+.kitae-inner {
+  display: grid;
+  align-items: center;
+  gap: clamp(40px, 6vw, 72px);
+  padding-block: clamp(56px, 9vw, 112px);
+}
+@media (min-width: 860px) {
+  .kitae-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(5rem, 3rem + 10vw, 9.5rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+}
+.name span {
+  margin-left: 0.15em;
+  font-size: 0.28em;
+  letter-spacing: 0;
+}
+.kitae p {
+  max-width: 27em;
+  margin: 1.2em 0 0;
+}
+
+.get {
+  display: grid;
+  gap: 16px;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.get li {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.get .tag {
+  color: var(--band-on);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.get .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+
+.days {
+  margin: 0;
+}
+.cells {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(7, auto);
+  gap: clamp(3px, 0.6vw, 6px);
+}
+.cells b,
+.cells i,
+.cells s {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: clamp(2px, 0.4vw, 4px);
+}
+.cells b {
+  background: var(--band-on);
+}
+.cells i {
+  background: var(--band-off);
+}
+.cells s {
+  background: var(--band-off);
+  opacity: 0.45;
+}
+.days figcaption {
+  max-width: 27em;
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
+  opacity: 0.88;
+}
+
+/* How we make apps */
+
+.how {
+  padding-block: clamp(56px, 9vw, 112px);
+}
+.how h2 {
+  max-width: 11em;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  font-size: clamp(2.6rem, 1.6rem + 4vw, 4.2rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+}
+.how dl {
+  display: grid;
+  gap: 36px;
+  margin: 0;
+}
+@media (min-width: 860px) {
+  .how dl {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(32px, 4vw, 56px);
+  }
+}
+.how .item {
+  padding-top: 18px;
+  border-top: 2px solid var(--rule);
+}
+.how dt {
+  color: var(--olive);
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.how dd {
+  max-width: 22em;
+  margin: 0.7rem 0 0;
+}
+
+/* Footer */
+
+.foot {
+  border-top: 2px solid var(--rule);
+}
+.foot-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 40px;
+  padding-block: 32px 48px;
+  font-size: 1.15rem;
+}
+.foot p {
+  max-width: 36em;
+  margin: 0;
+  color: var(--ink-soft);
+}
+.foot nav {
+  display: flex;
+  gap: 24px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
