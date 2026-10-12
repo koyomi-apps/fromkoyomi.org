@@ -44,6 +44,7 @@
   --stone-b: #F7F3A1;
   --heart: #70576B;
   --gap: #FDF9F0;
+  --hero-stone: #FDF9F0;
 
   --display: "Darker Grotesque", "Avenir Next Condensed", ui-sans-serif, system-ui, sans-serif;
   --mono: "Space Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -69,6 +70,57 @@
     --stone-b: #49482C;
     --heart: #D8B8D0;
     --gap: #14140E;
+    --hero-stone: #E8E4BE;
+  }
+}
+
+/* The theme switch in the header flips whichever theme the device asks for. */
+@media (prefers-color-scheme: light) {
+  :root:has(#flip:checked) {
+    color-scheme: dark;
+
+    --paper: #14140E;
+    --ink: #E6E2D9;
+    --ink-soft: #B3B0A0;
+    --rule: #E6E2D9;
+    --olive: #CECA75;
+    --olive-soft: #49482C;
+    --on-olive-soft: #E8E4BE;
+
+    --band-bg: #49482C;
+    --band-fg: #E8E4BE;
+    --band-on: #CECA75;
+    --band-off: rgba(255, 255, 255, 0.08);
+
+    --stone-a: #CECA75;
+    --stone-b: #49482C;
+    --heart: #D8B8D0;
+    --gap: #14140E;
+    --hero-stone: #E8E4BE;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:has(#flip:checked) {
+    color-scheme: light;
+
+    --paper: #FDF9F0;
+    --ink: #1C1C16;
+    --ink-soft: #5E5C4E;
+    --rule: #1C1C16;
+    --olive: #63611E;
+    --olive-soft: #F7F3A1;
+    --on-olive-soft: #545210;
+
+    --band-bg: #63611E;
+    --band-fg: #FFFFFF;
+    --band-on: #F7F3A1;
+    --band-off: rgba(255, 255, 255, 0.16);
+
+    --stone-a: #63611E;
+    --stone-b: #F7F3A1;
+    --heart: #70576B;
+    --gap: #FDF9F0;
+    --hero-stone: #FDF9F0;
   }
 }
 
@@ -154,6 +206,56 @@ a:focus-visible {
   font-weight: 400;
 }
 
+/* Theme switch: a checkbox and its label, so it needs no script. */
+.flip-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+.flip {
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+.flip:hover {
+  text-decoration-thickness: 4px;
+}
+.flip-input:focus-visible + .flip {
+  outline: 3px solid var(--olive);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.flip .to-light {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  .flip .to-dark {
+    display: none;
+  }
+  .flip .to-light {
+    display: inline;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root:has(#flip:checked) .flip .to-dark {
+    display: none;
+  }
+  :root:has(#flip:checked) .flip .to-light {
+    display: inline;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:has(#flip:checked) .flip .to-dark {
+    display: inline;
+  }
+  :root:has(#flip:checked) .flip .to-light {
+    display: none;
+  }
+}
+
 /* Cairn */
 
 .stone-a {
@@ -213,7 +315,7 @@ h1 {
 
 .hero-art {
   --gap: var(--olive-soft);
-  --stone-b: #FDF9F0;
+  --stone-b: var(--hero-stone);
   justify-self: stretch;
   display: grid;
   place-items: center;
@@ -221,11 +323,6 @@ h1 {
   padding: clamp(24px, 5vw, 48px);
   border-radius: 36px;
   background: var(--olive-soft);
-}
-@media (prefers-color-scheme: dark) {
-  .hero-art {
-    --stone-b: #E8E4BE;
-  }
 }
 .cairn {
   display: block;
