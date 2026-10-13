@@ -1,4 +1,4 @@
-/* Koyomi home page. Colours are Kitae's own colour sets; fonts are Kitae's fonts. */
+/* Koyomi home page. Colours are Kitae's own colour sets, apart from the heart's orange; fonts are Kitae's fonts. */
 
 @font-face {
   font-family: "Darker Grotesque";
@@ -42,7 +42,7 @@
   /* The cairn */
   --stone-a: #63611E;
   --stone-b: #F7F3A1;
-  --heart: #70576B;
+  --heart: #C96A1B;
   --gap: #FDF9F0;
   --hero-stone: #FDF9F0;
 
@@ -68,7 +68,7 @@
 
     --stone-a: #CECA75;
     --stone-b: #49482C;
-    --heart: #D8B8D0;
+    --heart: #E8A33D;
     --gap: #14140E;
     --hero-stone: #E8E4BE;
   }
@@ -94,7 +94,7 @@
 
     --stone-a: #CECA75;
     --stone-b: #49482C;
-    --heart: #D8B8D0;
+    --heart: #E8A33D;
     --gap: #14140E;
     --hero-stone: #E8E4BE;
   }
@@ -118,7 +118,7 @@
 
     --stone-a: #63611E;
     --stone-b: #F7F3A1;
-    --heart: #70576B;
+    --heart: #C96A1B;
     --gap: #FDF9F0;
     --hero-stone: #FDF9F0;
   }
