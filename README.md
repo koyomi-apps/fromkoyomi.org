@@ -2,11 +2,11 @@
 
 The home page for Koyomi's apps. It is plain HTML and CSS: no build step, no JavaScript, no cookies and no requests to other sites.
 
-- `index.html` and `style.css` are the page.
+- `index.html` and `style.css` are the page. `koyomi.css` holds the styles every Koyomi site shares (fonts, paper and ink, the theme switch, header, footer and the common sections); it is the same file on kitae.fromkoyomi.org and tabe.fromkoyomi.org, so change it in one repository and copy it to the others.
 - `fonts/` holds Darker Grotesque and Space Mono as WOFF2, converted from the files in Kitae for iPhone, with their SIL Open Font License texts.
 - `favicon.svg` and `apple-touch-icon.png` are the cairn mark.
 
-The colours are Kitae's own (`Shared/Colors.xcassets` in kitae-ios), apart from the orange heart and Tabe's persimmon, and the page follows the phone's light or dark setting.
+The colours are Kitae's own (`Shared/Colors.xcassets` in kitae-ios), apart from the orange heart and Tabe's persimmon, and the page follows the phone's light or dark setting. Each colour is written once as `light-dark(light, dark)`, and the header's switch flips the page by changing `color-scheme`, with no script. That needs Safari 17.5, Chrome 123 or Firefox 121 or newer.
 
 ## Preview
 
