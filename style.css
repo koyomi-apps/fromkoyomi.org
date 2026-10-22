@@ -1,4 +1,4 @@
-/* Koyomi home page. Colours are Kitae's own colour sets, apart from the heart's orange; fonts are Kitae's fonts. */
+/* Koyomi home page. Colours are Kitae's own colour sets, apart from the heart's orange and Tabe's persimmon; fonts are Kitae's fonts. */
 
 @font-face {
   font-family: "Darker Grotesque";
@@ -32,6 +32,7 @@
   --olive: #63611E;
   --olive-soft: #F7F3A1;
   --on-olive-soft: #545210;
+  --persimmon: #BF4500;
 
   /* The Kitae band */
   --band-bg: #63611E;
@@ -60,6 +61,7 @@
     --olive: #CECA75;
     --olive-soft: #49482C;
     --on-olive-soft: #E8E4BE;
+  --persimmon: #FF8C5C;
 
     --band-bg: #49482C;
     --band-fg: #E8E4BE;
@@ -86,6 +88,7 @@
     --olive: #CECA75;
     --olive-soft: #49482C;
     --on-olive-soft: #E8E4BE;
+  --persimmon: #FF8C5C;
 
     --band-bg: #49482C;
     --band-fg: #E8E4BE;
@@ -110,6 +113,7 @@
     --olive: #63611E;
     --olive-soft: #F7F3A1;
     --on-olive-soft: #545210;
+  --persimmon: #BF4500;
 
     --band-bg: #63611E;
     --band-fg: #FFFFFF;
@@ -464,17 +468,20 @@ h1 {
 }
 .next .soon {
   margin: 0 0 1.2rem;
-  color: var(--olive);
+  color: var(--persimmon);
   font-family: var(--mono);
   font-size: 0.9rem;
 }
 .next .name {
-  color: var(--olive);
+  color: var(--persimmon);
   font-size: clamp(4.4rem, 2.6rem + 8vw, 8rem);
 }
-.next p:last-child {
+.next .about {
   max-width: 27em;
   margin: 1.2em 0 0;
+}
+.next .get .tag {
+  color: var(--persimmon);
 }
 
 /* How we make apps */
